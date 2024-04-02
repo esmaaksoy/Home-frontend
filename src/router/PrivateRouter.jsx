@@ -16,7 +16,7 @@ const PrivateRouter = () => {
       <Footer />
     </>
   ) : (
-    <Navigate to="/home" />
+    <Navigate to="/" />
   );
 };
 
