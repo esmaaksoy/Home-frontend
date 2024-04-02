@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-teal-50">
+    <footer className="bg-[#D5D5D5]">
       <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 border-t border-gray-100 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16">
           <div>
@@ -194,7 +194,7 @@ const Footer = () => {
             </li>
           </ul>
           <p className="text-xs text-gray-500">
-            © 2023. Things Shop. All rights reserved.
+            © 2024. Home Shop. All rights reserved.
           </p>
         </div>
       </div>

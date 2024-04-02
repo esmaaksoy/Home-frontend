@@ -12,3 +12,16 @@ body{
     /* background-color:#E1E4DD ; */
     font-family: 'Times New Roman', Times, serif;
 }
+
+.image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #D5D5D5;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.box{
+    background-color: brown;
+}
