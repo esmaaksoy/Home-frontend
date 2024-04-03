@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+## Home Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application that allows users to login and logout, view existing products, product details, perform searches, and send emails.
 
-## Available Scripts
+## Project Outcome
 
-In the project directory, you can run:
+![Project gif](./home.gif)
 
-### `npm start`
+[Home Live Page](https://home-page-esma.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Skeleton
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+PopMovie (folder)
+|
+|
+├── public
+│    └── index.html
+├── src
+│    ├── context
+│    │    ├── AuthProvider.jsx
+│    │    └──  ProductProvider.jsx
+│    ├── components
+│    │     ├──Footer.jsx
+│    │     └──Card.jsx
+│    │     ├──Contact.jsx
+│    │     ├──LoginForm.jsx
+│    │     ├──Products.jsx
+│    │     ├──Testimonials.jsx
+│    │     ├──TimeLine.jsx
+│    │     ├──Title.jsx
+│    │     └──Navbar.jsx
+│    │     └──ScroolToTop.jsx
+│    ├── helpers
+│    │     ├── data.js
+│    │     ├── ToastNotify.js
+│    ├── pages
+│    │     ├── About.jsx
+│    │     ├── ProductDetail.jsx
+│    │     ├── Home.jsx
+│    │     ├── Login.jsx
+│    │     ├── NotFound.jsx
+│    ├── router
+│    │     ├── PrivateRouter.jsx
+│    │     └── AppRouter.jsx
+│    ├── App.js
+│    ├── index.js
+│    ├── index.css
+├── .env
+├── package-lock-json
+├── package.json
+├── tailwind.config.js
+└── README.md
+```
 
-### `npm test`
+## Tech/framework used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- **React**
+  is a JavaScript library developed by Facebook. It is used to build user interface components and is a popular choice for developing single-page applications.
+  react-dom
+- **Formik** A form library for React applications to manage forms.
+ - **Yup** A schema-based validation library for JavaScript objects.
+ - **Axios**
+  Axios is a JavaScript library used for making HTTP requests. It can work in both browsers and Node.js environments and provides a Promise-based API.
+  react
+- **React Helmet**
+  React Helmet is used to dynamically manage title, meta description, and other header tags in React applications. It allows you to add customized title and meta information for each page.
+  react-icons
+- **Tailwind CSSt**
+ Tailwind CSS is a utility-first CSS framework for rapidly building custom designs
+- **React Icons** is used to include icons in React applications. It includes various icon sets and can be easily used through components.
+- **React Router Dom** A library for single-page application content navigation in React applications.
+- **React Toastify** A library used to show notification messages to users in React applications.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+This is an example of how to list things you need to use the software and how to install them.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/esmaaksoy/home-frontend
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Create .env file in home directory.
+   ```sh
+   REACT_APP_BASE_URL=https://home-backend-8cpw.onrender.com
+   ```
+5. The project is ready, you can start using it now.
+   You can run:
 
-## Learn More
+   `npm start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   Runs the app in the development mode.\
+   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## İMPORTANT NOTES !
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To use the application, you can log in with the following email and password <br>
+email: admin@admin.com <br>
+password: Admin@1234 <br>
