@@ -9,9 +9,9 @@ const Products = ({ title }) => {
   return (
     <div className="p-[2rem] min-h-screen">
       <Title title={title} />
-      <div className="flex gap-7 p-[5rem] flex-wrap justify-center items-center">
+      <div className="grid grid-cols-3 gap-4 gap-7 p-[5rem]  justify-center items-center">
         {products?.map((item, index) => (
-          <Card key={index} {...item} />
+          <Card key={index} item = {item} />
         ))}
       </div>
     </div>
@@ -19,3 +19,9 @@ const Products = ({ title }) => {
 };
 
 export default Products;
+
+
+ 
+   
+
+

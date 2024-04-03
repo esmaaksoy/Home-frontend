@@ -9,7 +9,7 @@ const navigate = useNavigate()
   return (
     <header className="bg-[#F7F7F7]">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <NavLink className="block text-5xl mr-7" to="/">
+        <NavLink className="block text-5xl mr-7" to="/home">
     
           <HiHomeModern />
         </NavLink>

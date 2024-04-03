@@ -33,7 +33,6 @@ const LoginForm = () => {
         validationSchema={loginSchema}
         onSubmit={(values, actions) => {
           login(values);
-          console.log(values)
           actions.resetForm();
           actions.setSubmitting(false);
         }}
