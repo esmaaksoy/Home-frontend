@@ -8,10 +8,10 @@ const Testimonial = () => {
         <h2 className="text-center text-4xl font-bold tracking-tight text-white sm:text-5xl">
           Read trusted reviews from our customers
         </h2>
-        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+        <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3 md:gap-8">
           {testimonials.map((item) => (
             <blockquote className="rounded-lg bg-[#F7F7F7] p-6 shadow-sm sm:p-8">
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col lg:flex-row items-center gap-4">
                 <img
                   alt="Man"
                   src={item.avatar}

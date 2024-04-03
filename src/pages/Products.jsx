@@ -9,9 +9,9 @@ const Products = ({ title }) => {
   return (
     <div className="p-[2rem] min-h-screen">
       <Title title={title} />
-      <div className="grid grid-cols-3 gap-4 gap-7 p-[5rem]  justify-center items-center">
-        {products?.map((item, index) => (
-          <Card key={index} item = {item} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 p-4  sm:p-[5rem]  justify-center items-center">
+        {products.slice(0, 3)?.map((item, index) => (
+          <Card key={index} item={item} />
         ))}
       </div>
     </div>
@@ -19,9 +19,3 @@ const Products = ({ title }) => {
 };
 
 export default Products;
-
-
- 
-   
-
-

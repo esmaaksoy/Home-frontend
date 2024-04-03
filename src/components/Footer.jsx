@@ -128,7 +128,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="sm:flex sm:items-center sm:justify-between ">
           <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
             <li>
               <a
@@ -193,7 +193,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-500 mt-4">
             © 2024. Home Shop. All rights reserved.
           </p>
         </div>

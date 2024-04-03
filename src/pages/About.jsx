@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 
 const About = () => {
   return (
-    <div className="min-h-screen p-[4rem] ">
+    <div className="min-h-screen p-2 lg:p-[4rem] ">
       {/* <div className="mb-[3rem]">
         <h1 className="text-center text-5xl">Work Flow</h1>
         <div className="h-1 bg-[#D5D5D5] w-[8rem] m-auto mt-2"></div>
