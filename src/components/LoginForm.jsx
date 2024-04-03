@@ -5,7 +5,6 @@ import { Form, Formik } from "formik";
 import { object, string } from "yup";
 import { AuthContext } from "../context/AuthProvider";
 
-
 const LoginForm = () => {
   const [show, setShow] = useState(false);
   const { login } = useContext(AuthContext);
@@ -63,7 +62,7 @@ const LoginForm = () => {
                 {errors.email}
               </span>
             )}
-            
+
             <label
               htmlFor="password"
               className="relative mt-3 block overflow-hidden border-b border-[#4B7755] bg-transparent pt-3 focus-within:border-[#4B7755]"
@@ -73,10 +72,11 @@ const LoginForm = () => {
                   type={show ? "text" : "password"}
                   id="password"
                   name="password"
-                    value={values.password}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
+                  value={values.password}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   placeholder="Password"
+                  autoComplete="off"
                   className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
                 />
                 <span className="cursor-pointer">

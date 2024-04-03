@@ -1,9 +1,7 @@
-// import { Helmet } from "react-helmet";
 import { useForm, ValidationError } from "@formspree/react";
-
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useRef } from "react";
+import { toastSuccessNotify } from "../helpers/ToastNotify";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mjvnwpke");
@@ -11,29 +9,19 @@ const Contact = () => {
   const nameRef = useRef(null);
   const subjectRef = useRef(null);
   const messageRef = useRef(null);
+
   useEffect(() => {
     if (state.succeeded) {
-      toast.success("Your message successfully delivered.", {
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toastSuccessNotify("Your message successfully delivered.");
       emailRef.current.value = "";
       nameRef.current.value = "";
       subjectRef.current.value = "";
       messageRef.current.value = "";
     }
   }, [state.succeeded]);
+
   return (
     <>
-      {/* <Helmet>
-        <title>Contact | Home Page </title>
-        <meta name="description" content="Your page description" />
-      </Helmet> */}
-   
       <div className="min-h-screen  p-5 sm:p-10 flex justify-center items-center">
         <div className="w-full lg:w-[60%] m-auto bg-[#F6F6F6] p-10">
           {" "}
@@ -46,12 +34,13 @@ const Contact = () => {
               <div className="flex flex-col gap-4 sm:gap-6 sm:w-[50%] py-5 sm:py-10 sm:px-3 justify-center">
                 {" "}
                 <input
-                ref={emailRef}
+                  ref={emailRef}
                   id="email"
                   type="email"
                   name="email"
                   className="bg-[#F7F7F7] p-4 text-black border-2 border-[#D5D5D5] outline-none"
-                  placeholder="Email"                 
+                  placeholder="Email"
+                  autoComplete="off"
                 />
                 <input
                   ref={nameRef}
@@ -60,25 +49,28 @@ const Contact = () => {
                   type="text"
                   className="bg-[#F7F7F7] p-4 text-black border-2 border-[#D5D5D5] outline-none"
                   placeholder="Name"
+                  autoComplete="off"
                 />
                 <input
-                 ref={subjectRef}
+                  ref={subjectRef}
                   id="subject"
                   name="subject"
                   type="text"
                   className="bg-[#F7F7F7] p-4 text-black border-2 border-[#D5D5D5] outline-none"
                   placeholder="Subject"
+                  autoComplete="off"
                 />
               </div>
               <div className="sm:w-[50%] sm:py-10 sm:px-3">
                 <textarea
-                ref={messageRef}
+                  ref={messageRef}
                   id="message"
                   name="message"
                   cols="30"
                   rows="8"
                   className="bg-[#F7F7F7] w-full p-5 border-2 border-[#D5D5D5] outline-none"
                   placeholder="Message"
+                  autoComplete="off"
                 ></textarea>
               </div>
             </div>

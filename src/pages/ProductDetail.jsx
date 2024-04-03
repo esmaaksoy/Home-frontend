@@ -1,17 +1,17 @@
 import { useContext, useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ProductContext } from "../context/ProductProvider";
 import Title from "../components/Title";
 import { CiStar } from "react-icons/ci";
+import { Helmet } from "react-helmet";
 
 const ProductDetail = () => {
   const { productId } = useParams();
-
-  const { getDetail, details } = useContext(ProductContext);
+  const { getData, data } = useContext(ProductContext);
 
   useEffect(() => {
-    getDetail(productId);
-  }, [productId]);
+    getData(`products/${productId}`);
+  }, [productId, data]);
 
   const {
     thumbnail,
@@ -22,15 +22,18 @@ const ProductDetail = () => {
     images,
     rating,
     brand,
-    stock,
-  } = details;
+  } = data;
 
   return (
     <>
+      <Helmet>
+        <title>Product | Home Page </title>
+        <meta name="description" content="Your page description" />
+      </Helmet>
       <div className="min-h-screen flex  items-center p-5 sm:p-12">
         <div className="flex flex-col lg:flex-row backdrop-blur-sm bg-[#F7F7F7] sm:w-[80%] m-auto">
           <div className="lg:w-[50%]">
-            <img src={thumbnail} alt="image" className="w-full"/>
+            <img src={thumbnail} alt="image" className="w-full" />
             <div className="flex gap-2 py-2">
               {images?.map((item, index) => (
                 <img

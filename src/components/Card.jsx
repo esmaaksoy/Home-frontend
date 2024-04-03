@@ -1,16 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
-const Card = ({item}) => {
-  const { thumbnail, price, title, description, _id } = item
+const Card = ({ item }) => {
+  const { thumbnail, price, title, description, _id } = item;
   const navigate = useNavigate();
 
   return (
-    <a
-      href="#"
-      className="group block"
-      onClick={() =>
-        navigate(`/home/products/${_id}`)
-      }
+    <div
+      className="group block cursor-pointer"
+      onClick={() => navigate(`/home/products/${_id}`)}
     >
       <img
         src={thumbnail}
@@ -31,7 +28,7 @@ const Card = ({item}) => {
 
         <p className="text-gray-900">${price}</p>
       </div>
-    </a>
+    </div>
   );
 };
 

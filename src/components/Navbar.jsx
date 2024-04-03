@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 import { HiHomeModern } from "react-icons/hi2";
 
 const Navbar = () => {
   const { logout } = useContext(AuthContext);
-  const navigate = useNavigate();
+
   return (
     <header className="bg-[#F7F7F7] p-4">
       <div className="mx-auto flex  h-16 max-w-screen-xl items-center gap-5 sm:gap-8 px-4 sm:px-6 lg:px-8">

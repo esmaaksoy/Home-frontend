@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
 import PrivateRouter from "./PrivateRouter";
-import Products from "../pages/Products";
 import ProductDetail from "../pages/ProductDetail";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
@@ -15,8 +14,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<PrivateRouter />}>
-          <Route path="" element={<Home />} />  
-          {/* <Route path="products" element={<Products />} /> */}
+          <Route path="" element={<Home />} />
           <Route path="products/:productId" element={<ProductDetail />} />
           <Route path="about" element={<About />} />
         </Route>

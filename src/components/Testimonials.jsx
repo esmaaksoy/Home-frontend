@@ -1,13 +1,10 @@
 import { testimonials } from "../helpers/data";
-import { BiSolidQuoteAltLeft } from "react-icons/bi";
+
 
 const Testimonial = () => {
   return (
     <section className="">
       <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-5">
-        <h2 className="text-center text-4xl font-bold tracking-tight text-white sm:text-5xl">
-          Read trusted reviews from our customers
-        </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3 md:gap-8">
           {testimonials.map((item) => (
             <blockquote className="rounded-lg bg-[#F7F7F7] p-6 shadow-sm sm:p-8">

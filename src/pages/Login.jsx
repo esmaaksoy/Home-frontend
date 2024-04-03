@@ -1,11 +1,15 @@
 import { NavLink } from "react-router-dom";
-
 import LoginForm from "../components/LoginForm";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
-
   return (
     <>
+      <Helmet>
+        <title>Login | Home Page </title>
+        <meta name="description" content="Your page description" />
+      </Helmet>
+
       <div className="flex flex-col items-center justify-center">
         <div className="relative top-0 left-0 w-full overflow-hidden line-height-0 transform rotate-180">
           <svg
@@ -23,9 +27,9 @@ const Login = () => {
         </div>
         <NavLink
           to="/"
-          className="tracking-widest font-great text-3xl sm:text-6xl font-bold  text-[#D5D5D5] absolute top-[25%] left-[5%] "
+          className="tracking-widest font-great text-3xl sm:text-6xl font-bold text-black absolute top-[25%] left-[5%] "
         >
-          Home<span className="text-[#858585]">Page</span>
+          Home<span className="text-[#858585]  ">Page</span>
         </NavLink>
         <LoginForm />
       </div>

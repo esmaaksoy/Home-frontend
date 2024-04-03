@@ -95,7 +95,6 @@ const TimeLine = () => {
         iconStyle={{ background: "#F7F7F7", color: "black" }}
         icon={<RxMagicWand />}
         contentArrowStyle={{ borderRight: "7px solid  black" }}
-        
       >
         <p>
           We embark on the creation phase with enthusiasm and dedication.
@@ -110,7 +109,6 @@ const TimeLine = () => {
           alt="image"
           className="image"
         />
-        
       </VerticalTimelineElement>
     </VerticalTimeline>
   );
