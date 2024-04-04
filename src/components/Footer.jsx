@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { facebook, footerData, instagram, twitter } from "../helpers/data";
 
 const Footer = () => {
-  const icon = [facebook, instagram, twitter, footerData];
+  const icon = [facebook, instagram, twitter];
 
   return (
     <footer className="bg-[#D5D5D5] px-5">
