@@ -4,21 +4,6 @@ import { useEffect, useRef } from "react";
 import { toastSuccessNotify } from "../helpers/ToastNotify";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("mjvnwpke");
-  const emailRef = useRef(null);
-  const nameRef = useRef(null);
-  const subjectRef = useRef(null);
-  const messageRef = useRef(null);
-
-  useEffect(() => {
-    if (state.succeeded) {
-      toastSuccessNotify("Your message successfully delivered.");
-      emailRef.current.value = "";
-      nameRef.current.value = "";
-      subjectRef.current.value = "";
-      messageRef.current.value = "";
-    }
-  }, [state.succeeded]);
 
   return (
     <>
@@ -29,12 +14,11 @@ const Contact = () => {
             {" "}
             Contact Us
           </h1>
-          <form onSubmit={handleSubmit}>
+          <form>
             <div className="flex flex-col sm:flex-row">
               <div className="flex flex-col gap-4 sm:gap-6 sm:w-[50%] py-5 sm:py-10 sm:px-3 justify-center">
                 {" "}
                 <input
-                  ref={emailRef}
                   id="email"
                   type="email"
                   name="email"
@@ -43,7 +27,6 @@ const Contact = () => {
                   autoComplete="off"
                 />
                 <input
-                  ref={nameRef}
                   id="name"
                   name="name"
                   type="text"
@@ -52,7 +35,6 @@ const Contact = () => {
                   autoComplete="off"
                 />
                 <input
-                  ref={subjectRef}
                   id="subject"
                   name="subject"
                   type="text"
@@ -63,7 +45,6 @@ const Contact = () => {
               </div>
               <div className="sm:w-[50%] sm:py-10 sm:px-3">
                 <textarea
-                  ref={messageRef}
                   id="message"
                   name="message"
                   cols="30"
@@ -78,7 +59,6 @@ const Contact = () => {
               <button
                 className="group relative inline-block focus:outline-none focus:ring "
                 type="submit"
-                disabled={state.submitting}
               >
                 <span className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-[#D5D5D5] transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></span>
                 <span className="relative inline-block border-2 border-current dark:border-white px-8 py-3 text-sm font-bold uppercase tracking-widest text-black group-active:text-opacity-75">
