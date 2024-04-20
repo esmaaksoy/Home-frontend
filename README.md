@@ -11,7 +11,7 @@ This project is a web application that allows users to login and logout, view ex
 ## Project Skeleton
 
 ```
-PopMovie (folder)
+Home Page (folder)
 |
 |
 ├── public
